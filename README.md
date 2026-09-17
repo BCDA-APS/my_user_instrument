@@ -6,18 +6,10 @@ Instrument Github Repository to be used with BITS structure at the APS
 ## Start a fresh BITS environment with Conda
 
 ```bash
-export ENV_NAME=BITS_env
+export ENV_NAME=bits_env
 conda create -y -n $ENV_NAME python=3.12
 conda activate $ENV_NAME
 pip install apsbits
-```
-
-## Start a fresh BITS environment with pixi
-
-**Build the environment** (also installs apsbits and this package, editable):
-
-```bash
-pixi install
 ```
 
 ## Creating a New Instrument
@@ -101,7 +93,7 @@ A [shell script](https://github.com/BCDA-APS/BITS/blob/main/src/apsbits/demo_qse
 are all the command options, and what they do.
 
 ```bash
-(BITS_env) $ ./scripts/YOUR_INSTRUMENT_NAME_qs_host.sh help
+(bits_env) $ ./scripts/YOUR_INSTRUMENT_NAME_qs_host.sh help
 Usage: qs_host.sh {start|stop|restart|status|checkup|console|run} [NAME]
 
     COMMANDS
